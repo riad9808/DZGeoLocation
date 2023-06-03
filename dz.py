@@ -23,7 +23,7 @@ for location in locations:
     feature = {
         "type": "Feature",
         "geometry": {
-            "type": "Polygon",
+            "type": "Point",
             "coordinates": [location["longitude"], location["latitude"]]
         },
         "properties": {
