@@ -1,12 +1,19 @@
 import json
 
 locations = [
+    
     {
-        "latitude": 31.688480,
-        "longitude" : 6.065760,
+        "latitude": 31.7426878,
+        "longitude" : 6.0472499,
         "name": "Anadarko siege",
         "population": 320
     },
+    {
+        "latitude": 31.7426878,
+        "longitude" : 6.0472499,
+        "name": "Ourhoud siege",
+        "population": 220
+    }
   
    
 ]
@@ -16,7 +23,7 @@ for location in locations:
     feature = {
         "type": "Feature",
         "geometry": {
-            "type": "Point",
+            "type": "Polygon",
             "coordinates": [location["longitude"], location["latitude"]]
         },
         "properties": {
