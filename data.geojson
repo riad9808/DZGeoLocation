@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Polygon", "coordinates": [6.0472499, 31.7426878]}, "properties": {"name": "Anadarko siege", "population": 320}}, {"type": "Feature", "geometry": {"type": "Polygon", "coordinates": [6.0472499, 31.7426878]}, "properties": {"name": "Ourhoud siege", "population": 220}}]}
