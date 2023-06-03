@@ -1,0 +1,43 @@
+import json
+
+# Assuming you have a list of locations with latitude, longitude, and attributes
+locations = [
+    {
+        "latitude": 40.7128,
+        "longitude": -74.0060,
+        "name": "New York City",
+        "population": 8623000
+    },
+    {
+        "latitude": 51.5074,
+        "longitude": -0.1278,
+        "name": "London",
+        "population": 8982000
+    },
+    # Add more locations...
+]
+
+# Create a GeoJSON feature collection
+features = []
+for location in locations:
+    feature = {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [location["longitude"], location["latitude"]]
+        },
+        "properties": {
+            "name": location["name"],
+            "population": location["population"]
+        }
+    }
+    features.append(feature)
+
+geojson_data = {
+    "type": "FeatureCollection",
+    "features": features
+}
+
+# Save the GeoJSON data to a file
+with open("data.geojson", "w") as f:
+    json.dump(geojson_data, f)
